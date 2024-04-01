@@ -1,6 +1,10 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
+#include <SFML/Window.hpp>
+#include <SFML/Audio.hpp>
+#include <SFML/Network.hpp>
 
-int main()
+static void runWindow()
 {
     auto window = sf::RenderWindow{ { 1920u, 1080u }, "CMake SFML Project" };
     window.setFramerateLimit(144);
@@ -18,4 +22,10 @@ int main()
         window.clear();
         window.display();
     }
+}
+
+int main()
+{
+    runWindow();
+    runWindow();
 }
